@@ -15,7 +15,7 @@ import math
 
 
 
-def hist(data,bns,color):
+def hist(data,bns,color):##### Call Histogram of variable of interest
 	
 	n,bins,patches=pt.hist(data,bns,facecolor=color,alpha=.05)
 	
@@ -26,7 +26,7 @@ def hist(data,bns,color):
 	pt.show()
 	
 	
-def corrscatter(Xdt,Ydt):
+def corrscatter(Xdt,Ydt):###### Analyze a Target variable to independent variable by a scatterplot
 	
 	fig,ax=pt.subplots()
 	
@@ -47,7 +47,7 @@ def corrscatter(Xdt,Ydt):
 
 	
 
-def predscatter(Xdt,Ydt):
+def predscatter(Xdt,Ydt):###### Analyze Predicted Variables to Observed Variables
 	
 	fig,ax=pt.subplots()
 	
@@ -62,7 +62,7 @@ def predscatter(Xdt,Ydt):
 	pt.show()
 	
 	
-def ComputeError(X,Y,Theta,parameter):
+def ComputeError(X,Y,Theta,parameter):#### Execute Function return Error in gradient descent
     inner=np.power(((X*Theta.T)-Y),2,dtype=float)
     MeanError=np.sum(inner)/(2*len(X))
     return MeanError
@@ -70,7 +70,7 @@ def ComputeError(X,Y,Theta,parameter):
 	
 	
 
-def gradientDesc(K,Z,Err,Lrt,freq):
+def gradientDesc(K,Z,Err,Lrt,freq):###### Execute Function for gradient descent
     temp=np.matrix(np.zeros(Err.shape,dtype=float))
     param=int(Err.ravel().shape[1])
     NewError=np.zeros(freq)
@@ -98,7 +98,7 @@ def gradientDesc(K,Z,Err,Lrt,freq):
 
 	
 
-def crossValReg(X,Y,iter):
+def crossValReg(X,Y,iter):##### Call cross validation to train and test model
 
 	Reg=LinearRegression()
 	
