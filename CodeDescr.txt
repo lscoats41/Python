@@ -1,0 +1,24 @@
+# Python
+Python Codes
+
+
+###### RegFun.Py
+
+This Script is a script with several functions that can be accessed when a user
+is going through multivariate regression analysis to determine a targt variable, trainning the model,
+and testing the model. The libraries imported in were sklearn, numpy, and matplotlib to generate
+histograms, scatterplots, and linear regression values to evaluate training models and testing models.
+Cross Validation and Gradient Descent were method for analysis of multivariat regression analysis.
+This script will handle more than one variable as independent variables for analysis.
+
+
+######## RegressionAnal.py
+This Script is for a project where the best model is selected based on MSE. The code will use one csv file for training,
+and testing model to create model then execute model for predicted values for predicted file. The analysis is done through the process of 
+exploratory analysis, transformation, and regression analysis using Cross Validation and Gradient Descent. Functions utlized
+in this script were imported in from RegFun.py. A Dictonary was created to store predicted values from both process and the best
+option was selected. The select values were inserted into predicted file and exported as a csv. 
+
+
+###### 
+
