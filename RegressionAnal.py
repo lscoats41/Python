@@ -231,13 +231,23 @@ def exportPredfile(path,Pdict,PFile): ########### export file for TestPrediction
 
 def main():
 
-	temppath=r"C:\Projects\SportsProject\Data"
+	parser=argpars.ArgumentParser()
+
+        parser.add_argument('--ModelFile',action="store",type=str,help="Data to Build Model",default=r"C:\Projects\SportsProject\Temp\PredictiveModeling.csv")
+
+        parser.add_argument('--TestFile',action="store",type=str,help="Data to Predict",default=r"C:\Projects\SportsProject\Temp\TestCsv.csv")
+
+        parser.add_argument('--ExportPath',action="store",type=str,help="Director for Results",default=r"C:\Projects\SportsProject\Data")
+
+        args=parser.parse_args()
+
+        argdict=vars(args)
 	
-	exportpath=r"C:\Projects\SportsProject\Data"
+	exportpath=argdict['ExportPath']
 	
-	TestFile=r"C:\Projects\SportsProject\Temp\PredictiveModeling.csv"
+	TestFile=argdict['ModelFile']
 	
-	PredFile=r"C:\Projects\SportsProject\Temp\TestCsv.csv"
+	PredFile=argdict['TestFile']
 	
 	TstFile,Ytest,Xtest,PrdFile,Xprd=createdataframe(TestFile,PredFile)
 
@@ -247,6 +257,6 @@ def main():
 
 	PredDict=GradientDesc(PredDict,Ytest,Xtest,Xprd)
 	
-	exportPredfile(temppath,PredDict,PrdFile)
+	exportPredfile(exportpath,PredDict,PrdFile)
 
 main()
