@@ -13,6 +13,7 @@ This script will handle more than one variable as independent variables for anal
 
 
 ######## RegressionAnal.py
+
 This Script is for a project where the best model is selected based on MSE. The code will use one csv file for training,
 and testing model to create model then execute model for predicted values for predicted file. The analysis is done through the process of 
 exploratory analysis, transformation, and regression analysis using Cross Validation and Gradient Descent. Functions utlized
@@ -20,5 +21,11 @@ in this script were imported in from RegFun.py. A Dictonary was created to store
 option was selected. The select values were inserted into predicted file and exported as a csv. 
 
 
-###### 
+###### OKGWRcode3.py
+
+This script is an example of ETL, Geopatial Machine Learning, and manipulation of Remote Sensing data analyze the accuracy of
+historical weather data to determine its accuracy. AccuWeather historical data was compared to Weather Deciscion Technologies data for accuracy by
+using Oklahoma Mesonet data as a barometer. The final process will generate the mean absolute error for AccuaWeather and WDT compared to the accurate Oklahoma mesonet stations
+via aggregation on a daily, monthly, and seasonal time period for analysis.
+
 
