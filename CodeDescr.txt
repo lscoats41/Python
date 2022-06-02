@@ -1,6 +1,38 @@
 # Python
 Python Codes
 
+### PulseExtractProcessAuto.py
+This script will unzip numerous files from various naval ships and search through to find specific files to extract data pertaining to IT hardware or software then transform it 
+to qualitative variables to send alerts when needed. The transformed data will exported to text files for ingestion into a SQL Data Repository called Aras. This script was created then automated
+on a weekly basis. 
+
+### PulseFunction.py
+This script is a group of functions that will be used in main script PulseExtractProcessAuto.py to execute the ETL process
+
+### RandomForestCode.py
+This script was used to predict weather variables at several weather stations in the future upcoming hours. RandomForestRegressor was used in a pipeline
+along with standardscaler as a preprocessing method before RandomForestRegressor was used to generate model. 
+
+
+#### VotingTrainModelArg.py
+This script is where a voting classifier from sklearn is used to develop the best model to predict coronary heart disease.
+KNN, Logistic Regression, Gaussian, and RandomForestClassifier was used in model.
+
+### RibeyePrediction.py
+This script is where future prices are predicted by requested quantities. The model was created in RibeyeBidDataStackRV.py
+
+
+### RibeyeBidDataStackRV.py
+This script is used to develope and save a GLM model to predict past prices of products purchased base on quantity by contract. Once the best model model
+for material in each contract was saved, The model was utilized in the scripts RibeyePrediction.py. Script will also generate graphs for visualization to veiw
+predicted versus actual results. 
+
+
+##### InflationAdj.py
+This script is with a created Class call inflate to adjust prices of material to present time before Regression Analysis is utilized in 
+RibeyeBidDataStackRV.py
+
+
 
 ###### RegFun.Py
 
